@@ -40,7 +40,7 @@
 	$instance = getopt("i:");
 	$error = false;
 	$name = " [SYSTEM] ";
-	$language = '';
+
 
 	require "include/configs/language.php";
 	switch($config['bot_language'])
@@ -62,7 +62,6 @@
 	$cfg = $config['instance'][$instance['i']]['functions'];
 	$connect = $config['instance'][$instance['i']]['connection'];
 	$logs_system = $config['instance'][$instance['i']]['logs_system']['logs'];
-	$connect['bot_name'] = "(XBOT)".$connect['bot_name'];
 
 	echo PREFIX.$language['core'][2].END;
 	require "include/functions/functions.php";
@@ -99,7 +98,6 @@
 	if(check_numeric_connect($connect, $name))
 	{	
 		echo END.$language['core']['console'].END;
-		
 		$query = new ts3admin($connect['IP'], $connect['query_port']);
 
 		if(success($query->connect()))
