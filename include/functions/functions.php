@@ -144,11 +144,12 @@
 	function logs_create($name)
 	{
 		$data = date('d-m-Y');
+		$logs = '';
+		if(!is_dir("include/logs/$name/") && is_writable("include/logs/$name/")){
+            mkdir("include/logs/$name/");
 
-		if(!is_dir("include/logs/$name/"))
-			mkdir("include/logs/$name/");
-		
-		$logs = fopen("include/logs/$name/$data.log", "a");
+        $logs = fopen("include/logs/$name/$data.log", "a");
+        }
 		return $logs;
 	}
 	
