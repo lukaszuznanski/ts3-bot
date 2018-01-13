@@ -1,0 +1,8 @@
+Witaj drogi uzytkowniku. Jest to wiadomosc testowa!
+[CLIENT_IP]
+[CLIENT_NICK]
+[CLIENT_COUNTRY]
+[CLIENT_DBID]
+[SERVER_NAME]
+[SERVER_VERSION]
+[RECORD_ONLINE]
