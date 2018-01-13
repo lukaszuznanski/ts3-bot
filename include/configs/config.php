@@ -19,12 +19,12 @@ $config['instance']['1']['connection'] = array
 		
 	//TeamSpeak3 Server IP Adress
 
-		'IP' 			=> '127.0.0.1',
+		'IP' 			=> 'imperiumgracza.pl',
 		
 
 	//TeamSpeak3 Server Query Port
 
-		'query_port'		=> '10011',
+		'query_port'		=> '',
 
 
 	//TeamSpeak3 Server Port
@@ -44,12 +44,12 @@ $config['instance']['1']['connection'] = array
 
 	//Bot Nickname
 
-		'bot_name' 		=> 'Razor Meister',
+		'bot_name' 		=> 'TS3 BOT',
 
 
 	//Bot Default Channel
 
-		'default_channel' 	=> '2', 
+		'default_channel' 	=> '340',
 
 
 	//Bot interval (in seconds)
@@ -435,7 +435,7 @@ $config['instance']['1']['functions'] = array
 	//Visitors
 	'visitors' => array //(Pomysłodawca: zmechu[PL])
 	(
-		'enabled' => false,
+		'enabled' => true,
 		'channel_id' =>20671,
 		'channel_name' => "Odwiedziło nas: [VISITS] osób",	//[VISITS] - number of visitors
 		'time_interval' => array('weeks' => 0,'days' => 0,'hours' => 0,'minutes' => 0,'seconds' => 10),
@@ -484,46 +484,45 @@ $config['instance']['2']['connection'] = array
 	 		LOGIN TO TEAMSPEAK3 SERVER 
 
 	*****************************************************/
-		
-	//TeamSpeak3 Server IP Adress
 
-		'IP' 			=> '127.0.0.1',
-		
+//TeamSpeak3 Server IP Adress
 
-	//TeamSpeak3 Server Query Port
-
-		'query_port'		=> '10011',
+    'IP' 			=> 'imperiumgracza.pl',
 
 
-	//TeamSpeak3 Server Port
+    //TeamSpeak3 Server Query Port
 
-		'port' 			=> '9987',
-
-
-	//TeamSpeak3 Server Query Login
-
-		'login' 		=> 'serveradmin',
+    'query_port'		=> ,
 
 
-	//TeamSpeak3 Server Query Password
+    //TeamSpeak3 Server Port
 
-		'password' 		=> '',
-
-
-	//Bot Nickname
-
-		'bot_name' 		=> 'Razor Meister #2',
+    'port' 			=> 9987,
 
 
-	//Bot Default Channel
+    //TeamSpeak3 Server Query Login
 
-		'default_channel' 	=> '2',
+    'login' 		=> 'serveradmin',
 
 
-	//Bot interval (in seconds)
-		
-		'interval' => 1,
+    //TeamSpeak3 Server Query Password
 
+    'password' 		=> '',
+
+
+    //Bot Nickname
+
+    'bot_name' 		=> 'TS3 BOT',
+
+
+    //Bot Default Channel
+
+    'default_channel' 	=> '340',
+
+
+    //Bot interval (in seconds)
+
+    'interval' => 1,
 
 );
 
@@ -534,7 +533,7 @@ $config['instance']['2']['logs_system'] = array
 
 	'logs' => array
 	(
-		'enabled' => true,  		// true or false (logs system)
+		'enabled' => false,  		// true or false (logs system)
 	),
 );
 
@@ -604,8 +603,8 @@ $config['instance']['2']['functions'] = array
 	//online users
 	'online_users' => array
 	(
-		'enabled' => false,
-		'channel_id' => 21354,
+		'enabled' => true,
+		'channel_id' => 340,
 		'channel_name' => 'Online: [ONLINE]', //[ONLINE] - online users
 		'time_interval' => array('weeks' => 0,'days' => 0,'hours' => 0,'minutes' => 0,'seconds' => 5),
 		'data' => '1970-01-01 00:00:00', //Do not change
