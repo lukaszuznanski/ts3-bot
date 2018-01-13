@@ -12,15 +12,6 @@ COL_CYAN=$ESC_SEQ"36;01m"
 echo "TS3 BOT"
 instances=2
 
-installing()
-{
-	echo;
-   	echo -e "\e[36m****************************************\e$esc";
-   	echo -e "\e[32m    	INSTALLING: $1\e$esc";
-   	echo -e "\e[36m****************************************\e$esc";
-   	echo;
-}
-
 
 if [[ "$1" == "start" ]]; then
 	if [[ -f include/language_file/eng.txt || "$2" == "eng" ]]; then
