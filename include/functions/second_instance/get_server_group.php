@@ -16,10 +16,6 @@ function get_server_group($cfg, $client)
 	$config = $cfg['get_server_group']['info'];
 	$groups = explode(',', $client['client_servergroups']);
 
-	global $connect, $name;
-	if(strpos($connect['bot_name'], "(XBOT)") === false)
-		die(write_info($name."Bot musi mieć w nazwie frazę (XBOT)"));
-	
 	foreach($config as $ch_id => $server_group)
 	{
 		if($client['cid'] == $ch_id)

@@ -19,9 +19,6 @@
 		$server_info = $server_info = $query->getElement('data', $query->serverInfo());
 		$current_online = $server_info['virtualserver_clientsonline'] - $server_info['virtualserver_queryclientsonline'];
 
-		global $connect, $name;
-		if(strpos($connect['bot_name'], "(XBOT)") === false)
-			die(write_info($name."Bot musi mieć w nazwie frazę (XBOT)"));		
 
 		if(!file_exists("include/cache/record_online.txt"))
 		{
