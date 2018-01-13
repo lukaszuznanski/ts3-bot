@@ -9,8 +9,7 @@ COL_BLUE=$ESC_SEQ"34;01m"
 COL_MAGENTA=$ESC_SEQ"35;01m"
 COL_CYAN=$ESC_SEQ"36;01m"
 
-echo ":: XBot by Tymoteusz 'Razor Meister' Bartnik"
-echo ":: Version [0.4.2]"
+echo "TS3 BOT"
 instances=2
 
 installing()
