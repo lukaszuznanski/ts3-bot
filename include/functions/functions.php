@@ -162,7 +162,9 @@
 		echo $data." ".$text."\n";
 
 		if($logs_system['enabled'])
-			fwrite($logs, $data." ".$text."\n");	
+		    if($logs) {
+                fwrite($logs, $data . " " . $text . "\n");
+            }
 
 
 		unset($logs);
