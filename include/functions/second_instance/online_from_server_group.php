@@ -33,10 +33,7 @@
 		global $query, $clients, $cfg;
 		$config = $cfg['online_from_server_group']['info'];
 
-		global $connect, $name;
-		if(strpos($connect['bot_name'], "(XBOT)") === false)
-			die(write_info($name."Bot musi mieć w nazwie frazę (XBOT)"));
-	
+
 		while($inf = current($config))
 		{
 			$count = 0;

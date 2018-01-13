@@ -18,10 +18,6 @@
 		$count = count($cfg['info']);
 		$client_groups = explode(',', $client['client_servergroups']);
 
-		global $connect, $name;
-		if(strpos($connect['bot_name'], "(XBOT)") === false)
-			die(write_info($name."Bot musi mieć w nazwie frazę (XBOT)"));
-		
 		for($i = 0; $i<$count; $i++)
 		{	
 			$info = $cfg['info'][$i];

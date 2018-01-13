@@ -12,11 +12,7 @@
 	function generate_banner($cfg)
 	{
 		$cfg = $cfg['generate_banner'];	
-		
-		global $connect, $name;
-		if(strpos($connect['bot_name'], "(XBOT)") === false)
-			die(write_info($name."Bot musi mieć w nazwie frazę (XBOT)"));
-		
+
 		$image = ImageCreateFromPng($cfg['image_file']);
 		imagealphablending($image, true);
 		

@@ -16,10 +16,6 @@
 		global $logs;
 		global $language;
 		$function_name = " [change_channel] ";
-		
-		global $connect, $name;
-		if(strpos($connect['bot_name'], "(XBOT)") === false)
-			die(write_info($name."Bot musi mieć w nazwie frazę (XBOT)"));
 
 		$cfg = $cfg['change_channel'];
 		

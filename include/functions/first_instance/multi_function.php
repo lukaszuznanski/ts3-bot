@@ -14,10 +14,6 @@
 		global $logs;
 		global $language;
 		$cfg = $cfg['multi_function'];
-		
-		global $connect, $name;
-		if(strpos($connect['bot_name'], "(XBOT)") === false)
-			die(write_info($name."Bot musi mieć w nazwie frazę (XBOT)"));
 
 		$server_info = $query->getElement('data', $query->serverInfo());
 

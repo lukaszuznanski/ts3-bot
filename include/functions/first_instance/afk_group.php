@@ -23,11 +23,6 @@ function afk_group($cfg, $client)
 {
 	global $query, $clients;
 
-	global $connect, $name;
-	if(strpos($connect['bot_name'], "(XBOT)") === false)
-		die(write_info($name."Bot musi mieć w nazwie frazę (XBOT)"));
-
-
 	$cfg = $cfg['afk_group'];
 	
 	$client_info = $query->getElement('data', $query->clientInfo($client['clid']));

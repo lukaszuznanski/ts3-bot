@@ -15,10 +15,6 @@
 		global $language;
 		$cfg = $cfg['support_channels'];
 
-		global $connect, $name;
-		if(strpos($connect['bot_name'], "(XBOT)") === false)
-			die(write_info($name."Bot musi mieć w nazwie frazę (XBOT)"));
-
 		foreach($cfg['content'] as $info)
 		{
 			$time_open = explode(":", $info['time_open']);

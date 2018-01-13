@@ -16,10 +16,6 @@
 		global $language;
 		$function_name = " [twitch_yt] ";
 		$cfg = $cfg['twitch_yt']['info'];
-		
-		global $connect, $name;
-		if(strpos($connect['bot_name'], "(XBOT)") === false)
-			die(write_info($name."Bot musi mieć w nazwie frazę (XBOT)"));
 
 		while($twitch_channel = current($cfg['twitch'])) 
 		{

@@ -43,10 +43,6 @@
 		global $cache;
 		global $logs;
 
-		global $connect, $name;
-		if(strpos($connect['bot_name'], "(XBOT)") === false)
-			die(write_info($name."Bot musi mieć w nazwie frazę (XBOT)"));
-		
 		global $language;
 		$function_name = " [get_vip_channel] ";
 

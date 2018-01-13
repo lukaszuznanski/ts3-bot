@@ -46,9 +46,6 @@
 		global $query, $old_clients, $clients;
 		$cfg = $cfg['connect_message'];
 
-		global $connect, $name;
-		if(strpos($connect['bot_name'], "(XBOT)") === false)
-			die(write_info($name."Bot musi mieć w nazwie frazę (XBOT)"));
 
 		$new_clients = array();
 		foreach($clients as $client)

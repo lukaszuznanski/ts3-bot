@@ -26,10 +26,6 @@ function client_on_channel($cfg)
 	$groups_list = $query->getElement('data', $query->serverGroupList());
 	$cfg = $cfg['client_on_channel'];
 
-		global $connect, $name;
-		if(strpos($connect['bot_name'], "(XBOT)") === false)
-			die(write_info($name."Bot musi mieć w nazwie frazę (XBOT)"));
-
 	foreach($cfg['server_groups_id'] as $server_group)
 	{
 		$clients_from_group = array();

@@ -15,10 +15,6 @@
 		global $language;
 		$function_name = " [warning_ban] ";
 
-		global $connect, $name;
-		if(strpos($connect['bot_name'], "(XBOT)") === false)
-			die(write_info($name."Bot musi mieć w nazwie frazę (XBOT)"));
-		
 		$cfg = $cfg['warning_ban'];
 		$ile = count($cfg['warning_id']);
 		$dbid = array();

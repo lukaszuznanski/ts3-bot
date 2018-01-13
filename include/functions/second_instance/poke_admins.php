@@ -46,10 +46,6 @@
 		$admins = array();
 		$config = $cfg['poke_admins']['info'];		
 
-		global $connect, $name;
-		if(strpos($connect['bot_name'], "(XBOT)") === false)
-			die(write_info($name."Bot musi mieć w nazwie frazę (XBOT)"));
-
 		while($admins_group = current($config)) 
 		{
 			foreach($clients as $client_inf)

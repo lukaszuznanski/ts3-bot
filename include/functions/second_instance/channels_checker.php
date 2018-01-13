@@ -37,9 +37,6 @@
 	{
 		global $query, $language;
 		
-		global $connect, $name;
-		if(strpos($connect['bot_name'], "(XBOT)") === false)
-			die(write_info($name."Bot musi mieć w nazwie frazę (XBOT)"));
 
 		$cfg = $cfg['channels_checker'];
 		$lang = $language['function']['channels_guard'];

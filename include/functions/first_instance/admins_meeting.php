@@ -70,11 +70,6 @@
 	{
 		global $query, $logs, $language, $cache_poked, $cache_moved;
 
-		global $connect, $name;
-		if(strpos($connect['bot_name'], "(XBOT)") === false)
-			die(write_info($name."Bot musi mieć w nazwie frazę (XBOT)"));
-
-
 		$function_name = " [admins_meeting] ";
 
 		$time_good = 0;
