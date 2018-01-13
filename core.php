@@ -54,7 +54,7 @@
 	}
 
 	echo PREFIX.$language['core'][0].OWNER.END;
-	echo PREFIX."XBot Standard".END;
+	echo PREFIX."TS3 BOT ".END;
 	echo PREFIX.$language['core'][1].VERSION.END.END;	
 
 	echo PREFIX.$language['core'][3].END;
@@ -84,7 +84,7 @@
 			}
 		}
 	}
-	
+
 	echo PREFIX.$language['core'][5].count($plugins).write_loaded_functions(count($plugins), 1).END;
 	echo PREFIX.$language['core'][5].count($events).write_loaded_functions(count($events), 2).END;
 
@@ -100,22 +100,26 @@
 		echo END.$language['core']['console'].END;
 		$query = new ts3admin($connect['IP'], $connect['query_port']);
 
-		if(success($query->connect()))
+		if($query->getElement('success', $query->connect()) )
 		{
-			if(!success($query->login($connect['login'],$connect['password']))) die(write_info($name.$language['logs']['core']['error']['login']));
+			if(!success($query->login($connect['login'],$connect['password']))) write_info($name.$language['logs']['core']['error']['login']);
 			
-			if(!success($query->selectServer($connect['port']))) die(write_info($name.$language['logs']['core']['error']['port']));
+			if(!success($query->selectServer($connect['port']))) write_info($name.$language['logs']['core']['error']['port']);
 			
 			if(!success($query->setName($connect['bot_name']))) write_info($name.$language['logs']['core']['error']['bot_name']);
 
 			$whoAmI = $query->getElement('data',$query->whoAmI());
+			var_dump($whoAmI);
 
 			if(!success($query->clientMove($whoAmI['client_id'],$connect['default_channel']))) write_info($name.$language['logs']['core']['error']['default_channel']);
+
 
 			if($logs_system['enabled'])
 			{
 				$logs_date = date('d-m-Y');
-				fwrite($logs, date('d-m-Y G:i:s')." ".$name.$language['logs']['start'].END);
+				if($logs) {
+                    fwrite($logs, date('d-m-Y G:i:s') . " " . $name . $language['logs']['start'] . END);
+                }
 				echo date('d-m-Y G:i:s')." ".$name.$language['logs']['start'].END;
 			}
 			sleep(3);
@@ -143,7 +147,6 @@
 			while(true)
 			{	
 				sleep($connect['interval']);
-				$query->runtime['debug'] = array();
 				if(@$logs_date != date('d-m-Y') && $logs_system)
 				{
 					$logs = logs_create($connect['bot_name']);
